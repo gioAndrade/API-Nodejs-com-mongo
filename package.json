@@ -1,0 +1,20 @@
+{
+  "name": "api-nodejs-com-mongo",
+  "version": "1.0.0",
+  "description": "Api desenvolvida em node js utilizando express e mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiltonjunior/API-Nodejs-com-mongo.git"
+  },
+  "author": "Giovana Andrade e Wilton junior",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.3"
+  }
+}
