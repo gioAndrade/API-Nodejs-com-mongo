@@ -1,7 +1,17 @@
-module.exports = (app) => {
-    const mongoose = require('mongoose');
+'use strict'
 
-    let url = 'mongodb://localhost:27017'
+const mongoose = require('mongoose');
 
-    mongoose.connect(url, { useNewUrlParser: true });
-}
+let url = 'mongodb://localhost/user';
+mongoose.connect(url, { useCreateIndex: true, useNewUrlParser: true } );
+mongoose.Promise = global.Promise;
+
+var db = mongoose.connection;
+
+db.on('error', console.error);
+
+db.once('open', function () {
+    console.log('Conectado ao banco de dados produtosdb MongoDB.')
+});
+
+module.exports = mongoose;
